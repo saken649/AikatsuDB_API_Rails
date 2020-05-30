@@ -33,7 +33,8 @@ ActiveRecord::Schema.define(version: 2020_05_30_095116) do
   end
 
   create_table "albums", id: :string, limit: 64, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci", force: :cascade do |t|
-    t.string "name", limit: 128, null: false
+    t.string "title", limit: 128, null: false
+    t.string "sub_title", limit: 128
     t.datetime "sold_date", null: false
     t.string "image_path", limit: 128, null: false
     t.datetime "created_at", precision: 6, null: false
@@ -95,7 +96,7 @@ ActiveRecord::Schema.define(version: 2020_05_30_095116) do
   end
 
   create_table "series", id: :integer, default: nil, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci", force: :cascade do |t|
-    t.string "name", limit: 64, null: false
+    t.string "title", limit: 64, null: false
     t.string "sub_title", limit: 64
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
@@ -119,11 +120,13 @@ ActiveRecord::Schema.define(version: 2020_05_30_095116) do
 
   create_table "song_albums", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci", force: :cascade do |t|
     t.string "song_id", limit: 64, null: false
+    t.string "album_id", limit: 64, null: false
     t.integer "track_number", null: false
     t.integer "disc_number"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.datetime "deleted_at"
+    t.index ["album_id"], name: "fk_rails_6a2aa8bcca"
     t.index ["song_id"], name: "fk_rails_54260e8fee"
   end
 
@@ -142,7 +145,7 @@ ActiveRecord::Schema.define(version: 2020_05_30_095116) do
     t.string "creator_id", limit: 32, null: false
     t.string "type", limit: 16, null: false
     t.integer "display_order"
-    t.integer "profuction_displayable", limit: 1, null: false
+    t.integer "production_displayable", limit: 1, null: false
     t.string "delimiter_to_next", limit: 4
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
@@ -166,7 +169,8 @@ ActiveRecord::Schema.define(version: 2020_05_30_095116) do
 
   create_table "songs", id: :string, limit: 64, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci", force: :cascade do |t|
     t.string "parent_song_id", limit: 64
-    t.string "name", limit: 128, null: false
+    t.string "title", limit: 128
+    t.string "sub_title", limit: 128
     t.integer "is_short", limit: 1, null: false
     t.string "song_type", limit: 8
     t.integer "series_id", null: false
@@ -181,6 +185,7 @@ ActiveRecord::Schema.define(version: 2020_05_30_095116) do
   add_foreign_key "creators", "productions"
   add_foreign_key "singers", "groups"
   add_foreign_key "singers", "singers", column: "parent_singer_id"
+  add_foreign_key "song_albums", "albums"
   add_foreign_key "song_albums", "songs"
   add_foreign_key "song_characters", "characters"
   add_foreign_key "song_characters", "songs"

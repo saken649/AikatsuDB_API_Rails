@@ -5,7 +5,7 @@ class CreateSongCreators < ActiveRecord::Migration[6.0]
       t.string :creator_id, limit: 32, null: false
       t.string :type, limit: 16, null: false
       t.integer :display_order
-      t.integer :profuction_displayable, limit: 1, null: false
+      t.integer :production_displayable, limit: 1, null: false
       t.string :delimiter_to_next, limit: 4
       t.timestamps
       t.datetime :deleted_at
