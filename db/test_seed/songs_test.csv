@@ -1,0 +1,21 @@
+id,parent_song_id,title,sub_title,is_short,song_type,series_id
+signalize,,Signalize!,,false,op,11
+signalize^ichigo_miduki_ver,signalize,,～いちご & 美月 Ver.～,true,,11
+diamond_happy,,ダイヤモンドハッピー,,false,op,11
+diamond_happy^akari_sumire_hinaki_ver,diamond_happy,,〜あかり & スミレ & ひなき Ver.〜,false,,31
+diamond_happy^ichigo_aine_mio_ver,diamond_happy,,～いちご & あいね & みお ver.～,false,,51
+kira_power,,KIRA☆Power,,false,op,12
+shining_line,,SHINING LINE*,,false,op,12
+du_du_wa_do_it,,Du-Du-Wa DO IT!!,,false,op,13
+lovely_party_collection,,Lovely Party Collection,,false,op,13
+start_dash_sensation,,START DASH SENSATION,,false,op,14
+start_dash_sensation^taku_inoue_remix,start_dash_sensation,,[Taku Inoue Remix],false,,0
+start_line,,スタートライン！,,false,op,21
+1_2_sing_for_you,,"1,2,Sing for You!",,false,op,21
+star_jet,,スタージェット！,,false,op,21
+stardom,,STARDOM！,,false,op,22
+music_of_dream,,MUSIC of DREAM!!!,,false,op,22
+thanks_ok,,ありがと ⇄ 大丈夫,,false,op,41
+sokonishika_naimono,,そこにしかないもの,,false,op,41
+hitori_ja_nai,,ひとりじゃない！,,false,op,42
+kimi_no_entrance,,君のEntrance,,false,op,51
