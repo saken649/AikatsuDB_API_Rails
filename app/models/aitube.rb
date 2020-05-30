@@ -1,0 +1,2 @@
+class Aitube < ApplicationRecord
+end

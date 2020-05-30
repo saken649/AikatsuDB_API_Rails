@@ -1,0 +1,2 @@
+class CharacterSinger < ApplicationRecord
+end
