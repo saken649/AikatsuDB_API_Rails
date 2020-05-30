@@ -8,6 +8,7 @@ class CreateSingers < ActiveRecord::Migration[6.0]
       t.string :name_first_kana, limit: 16
       t.string :display_name, limit: 16
       t.string :group_id, limit: 32
+      t.integer :order
       t.timestamps
       t.datetime :deleted_at
     end

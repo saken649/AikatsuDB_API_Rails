@@ -111,6 +111,7 @@ ActiveRecord::Schema.define(version: 2020_05_30_095116) do
     t.string "name_first_kana", limit: 16
     t.string "display_name", limit: 16
     t.string "group_id", limit: 32
+    t.integer "order"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.datetime "deleted_at"
