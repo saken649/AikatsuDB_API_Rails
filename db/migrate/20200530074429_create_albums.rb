@@ -8,5 +8,6 @@ class CreateAlbums < ActiveRecord::Migration[6.0]
       t.timestamps
       t.datetime :deleted_at
     end
+    add_index :albums, :sold_date
   end
 end

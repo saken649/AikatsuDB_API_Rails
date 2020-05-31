@@ -40,6 +40,7 @@ ActiveRecord::Schema.define(version: 2020_05_30_095116) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.datetime "deleted_at"
+    t.index ["sold_date"], name: "index_albums_on_sold_date"
   end
 
   create_table "character_singers", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci", force: :cascade do |t|
@@ -62,6 +63,7 @@ ActiveRecord::Schema.define(version: 2020_05_30_095116) do
     t.string "voice_actor_first", limit: 8, null: false
     t.string "voice_actor_family_kana", limit: 16, null: false
     t.string "voice_actor_first_kana", limit: 16, null: false
+    t.integer "order"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.datetime "deleted_at"
