@@ -7,6 +7,9 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 require 'csv'
 
+con = ActiveRecord::Base.connection
+con.execute('SET FOREIGN_KEY_CHECKS = 0')
+
 [
   # master tables
   ::Group,
@@ -28,7 +31,9 @@ require 'csv'
 ].each do |target|
   table_name = target.to_s.underscore.pluralize
   CSV.foreach(Rails.root.join("db/test_seed/#{table_name}_test.csv"), headers: true) do |row|
-    target.create(row.to_h)
+    target.create!(row.to_h)
   end
   puts "seed: #{table_name}"
 end
+
+con.execute('SET FOREIGN_KEY_CHECKS = 1')
