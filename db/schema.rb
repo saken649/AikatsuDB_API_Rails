@@ -146,7 +146,7 @@ ActiveRecord::Schema.define(version: 2020_06_01_172450) do
   create_table "song_creators", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci", force: :cascade do |t|
     t.string "song_id", limit: 64, null: false
     t.string "creator_id", limit: 32, null: false
-    t.string "type", limit: 16, null: false
+    t.string "creator_type", limit: 16, null: false
     t.integer "display_order"
     t.integer "production_displayable", limit: 1, null: false
     t.string "delimiter_to_next", limit: 4
