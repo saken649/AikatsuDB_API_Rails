@@ -35,6 +35,15 @@ module AikatsuDBApi
     config.api_only = true
 
     # add autoload directory
-    # config.autoload_paths << Rails.root.join('db/test_seed/')
+    config.autoload_paths << Rails.root.join('app/services')
+    config.autoload_paths << Rails.root.join('app/utils')
+
+    # rack-cors config
+    config.middleware.insert_before 0, Rack::Cors do
+      allow do
+        origins '*'
+        resource '*', headers: :any, methods: [:get, :post, :patch, :put]
+      end
+    end
   end
 end
