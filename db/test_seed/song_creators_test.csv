@@ -1,4 +1,4 @@
-song_id,creator_id,type,display_order,production_displayable,delimiter_to_next
+song_id,creator_id,creator_type,display_order,production_displayable,delimiter_to_next
 signalize,hata_aki,lyrics,,0,
 signalize,narasaki,music,,0,
 signalize,sadesper_record,arrangement,,0,

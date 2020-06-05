@@ -1,11 +1,11 @@
-class CreateSortedSongsView < ActiveRecord::Migration[6.0]
+class CreateVSortedSongs < ActiveRecord::Migration[6.0]
   def up
     execute <<-SQL
-DROP VIEW IF EXISTS sorted_songs_view
+DROP VIEW IF EXISTS v_sorted_songs
     SQL
 
     execute <<-SQL
-CREATE OR REPLACE VIEW sorted_songs_view AS
+CREATE OR REPLACE VIEW v_sorted_songs AS
 SELECT
   s.id,
   s.parent_song_id,
@@ -27,7 +27,7 @@ ORDER BY
 
   def down
     execute <<-SQL
-DROP VIEW IF EXISTS sorted_songs_view
+DROP VIEW IF EXISTS v_sorted_songs
     SQL
   end
 end
