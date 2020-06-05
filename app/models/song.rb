@@ -60,7 +60,7 @@ SQL
     end
     results
   end
-　
+
   def self.song_with_related_records_by_id(song_id)
     # FIXME: バージョン違い対応が出来てない！
     Song.includes([
