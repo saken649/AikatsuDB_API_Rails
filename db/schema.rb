@@ -173,6 +173,7 @@ ActiveRecord::Schema.define(version: 2020_06_01_172450) do
   create_table "songs", id: :string, limit: 64, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci", force: :cascade do |t|
     t.string "parent_song_id", limit: 64
     t.string "title", limit: 128
+    t.string "title_kana"
     t.string "sub_title", limit: 128
     t.integer "is_short", limit: 1, null: false
     t.string "song_type", limit: 8
