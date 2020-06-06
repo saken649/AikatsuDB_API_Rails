@@ -62,9 +62,8 @@ SQL
   end
 
   def self.song_with_related_records_by_id(song_id)
-    # FIXME: バージョン違い対応が出来てない！
     Song.includes([
-                    :songs_child,
+                    :songs_parent,
                     :song_singers,
                     :singers,
                     :song_creators,

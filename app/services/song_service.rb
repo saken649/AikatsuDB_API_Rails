@@ -28,11 +28,11 @@ class SongService
       return {} if song.blank?
 
       singers = singers(song)
-      creators = ValueObjects::SongCreators.new(song.song_creators)
+      creators = ValueObjects::SongCreators.new(song_creators(song))
 
       {
         song_id: song.id,
-        title: song.title,
+        title: title(song),
         sub_title: song.sub_title,
         aitube_url: song.aitubes.map(&:youtube_id),
         singer: singers.singers_with_group,
@@ -83,6 +83,17 @@ class SongService
         singers.push(singer)
       end
       singers
+    end
+
+    def song_creators(song)
+      return song.song_creators if song.songs_parent.nil?
+      # 直接 concat すると UPDATE が走るので一度 to_a
+      song.song_creators.to_a.concat(song.songs_parent.song_creators)
+    end
+
+    def title(song)
+      return song.title if song.songs_parent.nil?
+      song.songs_parent.title
     end
   end
 end
