@@ -1,21 +1,21 @@
-id,parent_song_id,title,sub_title,is_short,song_type,series_id
-signalize,,Signalize!,,0,op,11
-signalize^ichigo_miduki_ver,signalize,,～いちご & 美月 Ver.～,1,,11
-diamond_happy,,ダイヤモンドハッピー,,0,op,11
-diamond_happy^akari_sumire_hinaki_ver,diamond_happy,,〜あかり & スミレ & ひなき Ver.〜,0,,31
-diamond_happy^ichigo_aine_mio_ver,diamond_happy,,～いちご & あいね & みお ver.～,0,,51
-kira_power,,KIRA☆Power,,0,op,12
-shining_line,,SHINING LINE*,,0,op,12
-du_du_wa_do_it,,Du-Du-Wa DO IT!!,,0,op,13
-lovely_party_collection,,Lovely Party Collection,,0,op,13
-start_dash_sensation,,START DASH SENSATION,,0,op,14
-start_dash_sensation^taku_inoue_remix,start_dash_sensation,,[Taku Inoue Remix],0,,0
-start_line,,スタートライン！,,0,op,21
-1_2_sing_for_you,,"1,2,Sing for You!",,0,op,21
-star_jet,,スタージェット！,,0,op,21
-stardom,,STARDOM！,,0,op,22
-music_of_dream,,MUSIC of DREAM!!!,,0,op,22
-thanks_ok,,ありがと ⇄ 大丈夫,,0,op,41
-sokonishika_naimono,,そこにしかないもの,,0,op,41
-hitori_ja_nai,,ひとりじゃない！,,0,op,42
-kimi_no_entrance,,君のEntrance,,0,op,51
+id,parent_song_id,title,title_kana,sub_title,is_short,song_type,series_id
+signalize,,Signalize!,しぐならいず,,0,op,11
+signalize^ichigo_miduki_ver,signalize,,,～いちご & 美月 Ver.～,1,,11
+diamond_happy,,ダイヤモンドハッピー,だいやもんどはっぴー,,0,op,11
+diamond_happy^akari_sumire_hinaki_ver,diamond_happy,,,〜あかり & スミレ & ひなき Ver.〜,0,,31
+diamond_happy^ichigo_aine_mio_ver,diamond_happy,,,～いちご & あいね & みお ver.～,0,,51
+kira_power,,KIRA☆Power,きら ぱわー,,0,op,12
+shining_line,,SHINING LINE*,しゃいにんぐ らいん,,0,op,12
+du_du_wa_do_it,,Du-Du-Wa DO IT!!,どぅ どぅ わ どぅ いっと,,0,op,13
+lovely_party_collection,,Lovely Party Collection,らぶりー ぱーてぃー これくしょん,,0,op,13
+start_dash_sensation,,START DASH SENSATION,すたーと だっしゅ せんせーしょん,,0,op,14
+start_dash_sensation^taku_inoue_remix,start_dash_sensation,,,[Taku Inoue Remix],0,,0
+start_line,,スタートライン！,すたーとらいん,,0,op,21
+1_2_sing_for_you,,"1,2,Sing for You!",わん つー しんぐ ふぉー ゆー,,0,op,21
+star_jet,,スタージェット！,すたーじぇっと,,0,op,21
+stardom,,STARDOM！,すたーだむ,,0,op,22
+music_of_dream,,MUSIC of DREAM!!!,みゅーじっく おぶ どりーむ,,0,op,22
+thanks_ok,,ありがと ⇄ 大丈夫,ありがと だいじょうぶ,,0,op,41
+sokonishika_naimono,,そこにしかないもの,そこにしかないもの,,0,op,41
+hitori_ja_nai,,ひとりじゃない！,ひとりじゃない,,0,op,42
+kimi_no_entrance,,君のEntrance,きみの えんとらんす,,0,op,51
