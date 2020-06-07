@@ -24,7 +24,8 @@ class SongService
         song_id: song.id,
         title: song._title,
         sub_title: song.sub_title,
-        aitube_url: song.aitubes.map(&:youtube_id),
+        # TODO: URL 直書きじゃなくて切り分ける
+        aitube_url: song.aitubes.map { |aitube| "https://www.youtube-nocookie.com/embed/#{aitube.youtube_id}" },
         singer: singers.singers_with_group,
         creators: {
           lyrics: creators.lyrics,
