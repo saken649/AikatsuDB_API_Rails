@@ -8,11 +8,11 @@ risuko,,ささかま,リス子,ささかま,りすこ,りすこ,star_anis,6
 sunao,,吉河,順央,よしかわ,すなお,すなお,star_anis,8
 moe,,山崎,もえ,やまざき,もえ,もえ,star_anis,9
 mona,,巴山,萌菜,ともやま,もな,,,
-mona^star_anis,mona,,,,,もな,star_anis,10
-mona^aikatsu_stars,mona,,,,,もな,aikatsu_stars,18
+mona~star_anis,mona,,,,,もな,star_anis,10
+mona~aikatsu_stars,mona,,,,,もな,aikatsu_stars,18
 ruka,,遠藤,瑠香,えんどう,るか,,,
-ruka^star_anis,ruka,,,,,るか,star_anis,7
-ruka^aikatsu_stars,ruka,,,,,るか,aikatsu_stars,11
+ruka~star_anis,ruka,,,,,るか,star_anis,7
+ruka~aikatsu_stars,ruka,,,,,るか,aikatsu_stars,11
 miki,,未来,みき,みらい,みき,みき,aikatsu_stars,12
 miho,,天音,みほ,あまね,みほ,みほ,aikatsu_stars,13
 nanase,,松岡,ななせ,まつおか,ななせ,ななせ,aikatsu_stars,14
@@ -30,5 +30,5 @@ yuuki,,桑原,由気,くわはら,ゆうき,かぐや,best_friends,26
 youko,,日笠,陽子,ひかさ,ようこ,ひびき,best_friends,27
 saori,,大西,沙織,おおにし,さおり,アリシア,best_friends,28
 rin,,逢来,りん,あいら,りん,,,
-rin^wakaba,rin,,,,,わかば,best_friends,29
-rin^raki,rin,,,,,らき,best_friends,30
+rin~wakaba,rin,,,,,わかば,best_friends,29
+rin~raki,rin,,,,,らき,best_friends,30

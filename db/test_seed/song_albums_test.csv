@@ -2,12 +2,12 @@ song_id,album_id,track_number,disc_number
 signalize,signalize,1,1
 signalize,calendar_girls,1,1
 signalize,complete_cdbox,2,12
-signalize^ichigo_miduki_ver,complete_cdbox,14,1
+signalize~ichigo_miduki_ver,complete_cdbox,14,1
 diamond_happy,diamond_happy,1,1
 diamond_happy,calendar_girls,1,2
 diamond_happy,complete_cdbox,9,12
-diamond_happy^akari_sumire_hinaki_ver,dramatic_girl,2,1
-diamond_happy^ichigo_aine_mio_ver,sing_a_song_shuffle,1,1
+diamond_happy~akari_sumire_hinaki_ver,dramatic_girl,2,1
+diamond_happy~ichigo_aine_mio_ver,sing_a_song_shuffle,1,1
 kira_power,kira_power,1,1
 kira_power,shining_star,1,1
 kira_power,complete_cdbox,3,12
@@ -21,7 +21,7 @@ lovely_party_collection,lovely_party,11,2
 lovely_party_collection,complete_cdbox,5,12
 start_dash_sensation,start_dash_sensation,1,1
 start_dash_sensation,complete_cdbox,14,12
-start_dash_sensation^taku_inoue_remix,not_odayaka_remix,12,1
+start_dash_sensation~taku_inoue_remix,not_odayaka_remix,12,1
 start_line,start_line,1,1
 start_line,brilliant_stars,13,2
 1_2_sing_for_you,1_2_sing_for_you,1,1

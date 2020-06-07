@@ -1,15 +1,15 @@
 id,parent_song_id,title,title_kana,sub_title,is_short,song_type,series_id
 signalize,,Signalize!,しぐならいず,,0,op,11
-signalize^ichigo_miduki_ver,signalize,,,～いちご & 美月 Ver.～,1,,11
+signalize~ichigo_miduki_ver,signalize,,,～いちご & 美月 Ver.～,1,,11
 diamond_happy,,ダイヤモンドハッピー,だいやもんどはっぴー,,0,op,11
-diamond_happy^akari_sumire_hinaki_ver,diamond_happy,,,〜あかり & スミレ & ひなき Ver.〜,0,,31
-diamond_happy^ichigo_aine_mio_ver,diamond_happy,,,～いちご & あいね & みお ver.～,0,,51
+diamond_happy~akari_sumire_hinaki_ver,diamond_happy,,,〜あかり & スミレ & ひなき Ver.〜,0,,31
+diamond_happy~ichigo_aine_mio_ver,diamond_happy,,,～いちご & あいね & みお ver.～,0,,51
 kira_power,,KIRA☆Power,きら ぱわー,,0,op,12
 shining_line,,SHINING LINE*,しゃいにんぐ らいん,,0,op,12
 du_du_wa_do_it,,Du-Du-Wa DO IT!!,どぅ どぅ わ どぅ いっと,,0,op,13
 lovely_party_collection,,Lovely Party Collection,らぶりー ぱーてぃー これくしょん,,0,op,13
 start_dash_sensation,,START DASH SENSATION,すたーと だっしゅ せんせーしょん,,0,op,14
-start_dash_sensation^taku_inoue_remix,start_dash_sensation,,,[Taku Inoue Remix],0,,0
+start_dash_sensation~taku_inoue_remix,start_dash_sensation,,,[Taku Inoue Remix],0,,0
 start_line,,スタートライン！,すたーとらいん,,0,op,21
 1_2_sing_for_you,,"1,2,Sing for You!",わん つー しんぐ ふぉー ゆー,,0,op,21
 star_jet,,スタージェット！,すたーじぇっと,,0,op,21
