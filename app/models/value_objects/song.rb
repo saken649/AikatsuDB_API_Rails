@@ -16,7 +16,7 @@ module ValueObjects
       @title = song._title
       @sub_title = song.sub_title
       @singer = singers.singers_with_group
-      @image_path = "#{::ImageUtil::image_host}/#{image_path}"
+      @image_path = ::ImageUtil.with_host(image_path)
     end
   end
 end
