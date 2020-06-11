@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_06_01_172450) do
+ActiveRecord::Schema.define(version: 2020_06_11_131530) do
 
   create_table "aitubes", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci", force: :cascade do |t|
     t.string "song_id", limit: 64, null: false
@@ -95,6 +95,13 @@ ActiveRecord::Schema.define(version: 2020_06_01_172450) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.datetime "deleted_at"
+  end
+
+  create_table "searches", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|
+    t.string "keyword"
+    t.string "related_table", limit: 32
+    t.string "related_key"
+    t.index ["keyword"], name: "keyword", type: :fulltext
   end
 
   create_table "series", id: :integer, default: nil, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci", force: :cascade do |t|
