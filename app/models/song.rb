@@ -51,8 +51,6 @@ class Song < ApplicationRecord
         .first
     end
 
-    private
-
     def songs_with_relations
       Song.includes(
             [

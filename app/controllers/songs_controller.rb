@@ -8,4 +8,10 @@ class SongsController < ApplicationController
   def detail
     render json: SongService.detail(params[:song_id])
   end
+
+  def search
+    render json: [], status: :not_found if params[:keyword].nil?
+
+    render json: Search.search(params[:keyword])
+  end
 end

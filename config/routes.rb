@@ -12,6 +12,7 @@ Rails.application.routes.draw do
   get '/songs/:song_id', to: 'songs#list' # 原曲＋バージョン
   get '/songs', to: 'songs#list' # 楽曲リスト
   get '/song_detail/:song_id', to: 'songs#detail' # 楽曲詳細
+  get '/song/search', to: 'songs#search'
 
   # Albums
   get '/album_detail/:album_id', to: 'albums#detail' # アルバム詳細
