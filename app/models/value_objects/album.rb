@@ -24,7 +24,7 @@ module ValueObjects
       @id = id
       @title = title
       @sub_title = sub_title
-      @sold_date = sold_date
+      @sold_date = ::DateUtil.ymd(sold_date)
       @image_path = ::ImageUtil.with_host(image_path)
       @disc_number = disc_number
       @disc_total = disc_total

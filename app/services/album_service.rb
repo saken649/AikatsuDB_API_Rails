@@ -9,7 +9,7 @@ class AlbumService
         album_id: album.id,
         title: album.title,
         sub_title: album.sub_title,
-        sold_date: album.sold_date,
+        sold_date: ::DateUtil.ymd(album.sold_date),
         image_path: ::ImageUtil.with_host(album.image_path),
         total_disc: album.album_tracks.maximum(:disc_number),
         songs: album_songs
