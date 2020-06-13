@@ -1,5 +1,5 @@
-id,name
-star_anis,STAR☆ANIS
-aikatsu_stars,AIKATSU☆STARS!
-best_friends,BEST FRIENDS!
-denpagumi_inc,でんぱ組.inc
+id,name,order
+star_anis,STAR☆ANIS,1
+aikatsu_stars,AIKATSU☆STARS!,2
+best_friends,BEST FRIENDS!,3
+denpagumi_inc,でんぱ組.inc,4
