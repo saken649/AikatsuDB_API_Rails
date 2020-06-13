@@ -9,6 +9,7 @@ class CreateSingers < ActiveRecord::Migration[6.0]
       t.string :display_name, limit: 16
       t.string :group_id, limit: 32
       t.integer :has_children, limit: 1, null: false
+      t.integer :is_current, limit: 1, null: true
       t.integer :order
       t.timestamps
       t.datetime :deleted_at

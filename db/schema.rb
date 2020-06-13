@@ -121,6 +121,7 @@ ActiveRecord::Schema.define(version: 2020_06_11_131530) do
     t.string "display_name", limit: 16
     t.string "group_id", limit: 32
     t.integer "has_children", limit: 1, null: false
+    t.integer "is_current", limit: 1
     t.integer "order"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
