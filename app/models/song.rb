@@ -29,18 +29,25 @@ class Song < ApplicationRecord
   end
 
   class << self
-    def list(song_id)
-      res = if song_id.nil?
-              songs_with_relations
-                .order('songs.title_kana ASC')
-            else
-              songs_with_relations
-                .where(songs: {id: song_id})
-                .order('albums.sold_date ASC')
-            end
-      res
-        .where(songs: {parent_song_id: nil})
-        .to_a
+    def list(id:, type:)
+      case type
+        when SongService::SearchType::ALL
+          # ALL の時は読み仮名 50 音順
+          res = songs_with_relations
+            .order('songs.title_kana ASC')
+        when SongService::SearchType::SONG
+          res = songs_with_relations
+            .where(songs: {id: id})
+            .order('albums.sold_date ASC')
+        when SongService::SearchType::SINGER
+          # rin では NG、rin~raki とかでヒットする
+          res = songs_with_relations
+                  .where(songs: {id: SongSinger.where(singer_id: id).pluck(:song_id)})
+                  .order('albums.sold_date ASC')
+        else
+          StandardError.new('invalid search type.')
+      end
+      res.where(songs: {parent_song_id: nil}).to_a
     end
 
     def song(song_id)

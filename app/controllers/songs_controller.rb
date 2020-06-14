@@ -1,7 +1,21 @@
 class SongsController < ApplicationController
+  # TODO: status もう少し整える
+
   # 楽曲リスト
   def list
-    r = SongService.list(params[:song_id])
+    r = SongService.list(id: nil, type: SongService::SearchType::ALL)
+    render json: r, status: r.present? ? :ok : :not_found
+  end
+
+  # 楽曲バージョンリスト
+  def list_variation
+    r = SongService.list(id: params[:song_id], type: SongService::SearchType::SONG)
+    render json: r, status: r.present? ? :ok : :not_found
+  end
+
+  # 楽曲リスト(歌唱担当)
+  def list_by_singer
+    r = SongService.list(id: params[:singer_id], type: SongService::SearchType::SINGER)
     render json: r, status: r.present? ? :ok : :not_found
   end
 

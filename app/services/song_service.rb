@@ -1,8 +1,14 @@
 class SongService
+  module SearchType
+    ALL = 0
+    SONG = 1
+    SINGER = 2
+  end
+
   class << self
     # 楽曲リスト
-    def list(song_id)
-      songs = Song.list(song_id)
+    def list(id:, type:)
+      songs = Song.list(id: id, type: type)
                   .map { |song| [song, variations(song)].compact }
                   .flatten
       songs(songs)
