@@ -42,5 +42,10 @@ SQL
             .order('`groups`.`order` ASC')
             .to_a
     end
+
+    def by_id(singer_id)
+      Singer.eager_load([:group, :singers_parent, singers_parent: :group])
+            .find_by(singers: { id: singer_id })
+    end
   end
 end

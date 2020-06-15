@@ -5,6 +5,16 @@ class SingersService
       group_by_group(singers)
     end
 
+    def singer_name(singer_id)
+      singer = Singer.by_id(singer_id)
+      name = if singer.parent_singer_id.present?
+               singer.singers_parent.name
+             else
+               singer.name
+             end
+      ValueObjects::SingerAbout.new(singer_id: singer_id, name: name, display_name: singer.display_name, is_current: singer.is_current)
+    end
+
     private
 
     def group_by_group(singers)

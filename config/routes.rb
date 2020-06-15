@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   # Singers
   get '/singers_name_list', to: 'singers#name_list'
   get '/singers', to: 'singers#list'
+  get '/singer_name/:singer_id', to: 'singers#name'
 
   # Characters
   get '/characters_name_list', to: 'characters#name_list'

@@ -8,4 +8,9 @@ class SingersController < ApplicationController
   def list
     render json: SingersService.list
   end
+
+  # 歌唱担当名前
+  def name
+    render json: SingersService.singer_name(params[:singer_id])
+  end
 end
