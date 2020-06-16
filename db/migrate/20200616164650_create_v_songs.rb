@@ -1,4 +1,5 @@
 class CreateVSongs < ActiveRecord::Migration[6.0]
+  # TODO: 使えるかと思って作ったけども、結局親子関係は使うので活用の場はなさそう
   def up
     execute <<-SQL
 DROP VIEW IF EXISTS v_sorted_songs
