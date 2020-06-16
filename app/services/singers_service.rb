@@ -39,7 +39,8 @@ class SingersService
       singers.sort_by { |s| s.order }
              .map do |s|
                name = s.parent_singer_id.present? ? s.singers_parent.name : s.name
-               ::ValueObjects::SingerAbout.new(singer_id: s.id, name: name, display_name: s.display_name, is_current: s.is_current)
+               name_kana = s.parent_singer_id.present? ? s.singers_parent.name_kana : s.name_kana
+               ::ValueObjects::SingerAbout.new(singer_id: s.id, name: name, name_kana: name_kana, display_name: s.display_name, is_current: s.is_current)
              end
     end
   end
