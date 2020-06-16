@@ -5,4 +5,13 @@ class SongCreator < ApplicationRecord
   module Delimiter
     KUTEN = '、'
   end
+
+  module CreatorType
+    LYRICS = 'lyrics'
+    MUSIC = 'music'
+    ARRANGEMENT = 'arrangement'
+    REMIX = 'remix'
+  end
+
+  CREATOR_TYPES = [CreatorType::LYRICS, CreatorType::MUSIC, CreatorType::ARRANGEMENT, CreatorType::REMIX].freeze
 end

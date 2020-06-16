@@ -3,13 +3,6 @@ module ValueObjects
     ATTRS = [:all, :lyrics, :music, :arrangement, :remix]
     attr_reader(*ATTRS)
 
-    module CreatorType
-      LYRICS = 'lyrics'
-      MUSIC = 'music'
-      ARRANGEMENT = 'arrangement'
-      REMIX = 'remix'
-    end
-
     def initialize(song_creators)
       @all = []
 

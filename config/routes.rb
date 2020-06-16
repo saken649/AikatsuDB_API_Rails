@@ -19,4 +19,7 @@ Rails.application.routes.draw do
 
   # Albums
   get '/album_detail/:album_id', to: 'albums#detail' # アルバム詳細
+
+  # Creators
+  get '/creators', to: 'creators#list'
 end
