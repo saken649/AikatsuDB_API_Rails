@@ -8,6 +8,8 @@ class CreateSongs < ActiveRecord::Migration[6.0]
       t.integer :is_short, limit: 1, null: false
       t.string :song_type, limit: 8
       t.integer :series_id, null: false
+      t.timestamps
+      t.datetime :deleted_at
     end
     add_foreign_key :songs, :songs, column: :parent_song_id
     add_foreign_key :songs, :series

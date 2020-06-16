@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_06_11_131530) do
+ActiveRecord::Schema.define(version: 2020_06_16_164650) do
 
   create_table "aitubes", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci", force: :cascade do |t|
     t.string "song_id", limit: 64, null: false
@@ -188,6 +188,9 @@ ActiveRecord::Schema.define(version: 2020_06_11_131530) do
     t.integer "is_short", limit: 1, null: false
     t.string "song_type", limit: 8
     t.integer "series_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.datetime "deleted_at"
     t.index ["parent_song_id"], name: "fk_rails_05036d730a"
     t.index ["series_id"], name: "fk_rails_80a89ae734"
   end
