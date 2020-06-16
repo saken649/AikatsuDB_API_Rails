@@ -4,4 +4,8 @@ class CreatorsController < ApplicationController
   def list
     render json: CreatorsService.list
   end
+
+  def name
+    render json: CreatorsService.name(params[:creator_id])
+  end
 end

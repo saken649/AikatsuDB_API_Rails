@@ -11,5 +11,10 @@ class Creator < ApplicationRecord
              .order('COALESCE(name_family_kana, artist_name_kana) ASC')
              .to_a
     end
+
+    def by_id(creator_id)
+      Creator.eager_load(:production, :song_creators)
+             .find_by(id: creator_id)
+    end
   end
 end

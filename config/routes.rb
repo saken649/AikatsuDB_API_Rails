@@ -2,6 +2,8 @@ Rails.application.routes.draw do
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
   # get '/teapot', to: 'teapots#index'
 
+  # TODO: /singer_name/ → /singer/name とかに書き換える
+
   # Singers
   get '/singers_name_list', to: 'singers#name_list'
   get '/singers', to: 'singers#list'
@@ -23,4 +25,5 @@ Rails.application.routes.draw do
 
   # Creators
   get '/creators', to: 'creators#list'
+  get '/creator_name/:creator_id', to: 'creators#name'
 end
