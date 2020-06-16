@@ -7,12 +7,9 @@ class SingersService
 
     def singer_name(singer_id)
       singer = Singer.by_id(singer_id)
-      name = if singer.parent_singer_id.present?
-               singer.singers_parent.name
-             else
-               singer.name
-             end
-      ValueObjects::SingerAbout.new(singer_id: singer_id, name: name, display_name: singer.display_name, is_current: singer.is_current)
+      name = singer.parent_singer_id.present? ? singer.singers_parent.name : singer.name
+      name_kana = singer.parent_singer_id.present? ? singer.singers_parent.name_kana : singer.name_kana
+      ValueObjects::SingerAbout.new(singer_id: singer_id, name: name, name_kana: name_kana, display_name: singer.display_name, is_current: singer.is_current)
     end
 
     private
