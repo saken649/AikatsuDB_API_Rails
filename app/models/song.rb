@@ -17,9 +17,21 @@ class Song < ApplicationRecord
   has_many :songs_children, class_name: 'Song', foreign_key: 'parent_song_id', dependent: :destroy
   belongs_to :songs_parent, class_name: 'Song', foreign_key: 'parent_song_id', optional: true
 
+  scope :order_by_singer, -> { order('song_singers.display_order ASC') }
+  scope :order_by_creator, -> { order('song_creators.display_order ASC') }
+  scope :order_by_aitube, -> { order('aitubes.order ASC') }
+  scope :default_order, -> { order_by_singer.order_by_creator.order_by_aitube }
+  scope :order_by_title_kana, -> { order('songs.title_kana ASC') }
+  scope :order_by_sold_date, -> { order('albums.sold_date ASC') }
+
   def _title
     return title if title.present?
     songs_parent.title
+  end
+
+  def _title_kana
+    return title_kana if title_kana.present?
+    songs_parent.title_kana
   end
 
   def _song_creators
@@ -30,24 +42,30 @@ class Song < ApplicationRecord
 
   class << self
     def list(id:, type:)
+      # TODO: モデルを VSong に差し替え（リレーションも全部貼る）、並び順を 50 音順に統一する
       case type
         when SongService::SearchType::ALL
           # ALL の時は読み仮名 50 音順
+          # バリエーションは後から足すので、order は樹にしない
           res = songs_with_relations
-            .order('songs.title_kana ASC')
-        when SongService::SearchType::SONG
-          res = songs_with_relations
-            .where(songs: {id: id})
-            .order('albums.sold_date ASC')
+                  .where(songs: {parent_song_id: nil})
+        # when SongService::SearchType::SONG
+        #   res = songs_with_relations
+        #           .where(songs: {id: id})
+        #           .order('albums.sold_date ASC')
         when SongService::SearchType::SINGER
           # rin では NG、rin~raki とかでヒットする
           res = songs_with_relations
                   .where(songs: {id: SongSinger.where(singer_id: id).pluck(:song_id)})
-                  .order('albums.sold_date ASC')
+                  .order_by_sold_date
+        when SongService::SearchType::CREATOR
+          res = songs_with_relations
+                  .where(songs: {id: SongCreator.where(creator_id: id).pluck(:song_id).uniq})
+                  .order_by_sold_date
         else
           StandardError.new('invalid search type.')
       end
-      res.where(songs: {parent_song_id: nil}).to_a
+      res.to_a
     end
 
     def song(song_id)
@@ -80,9 +98,8 @@ class Song < ApplicationRecord
               creators: :production
             ]
           )
-          .order('song_singers.display_order ASC')
-          .order('song_creators.display_order ASC')
-          .order('aitubes.order ASC')
+          .default_order
+          .order_by_title_kana
     end
   end
 end

@@ -3,14 +3,16 @@ class SongService
     ALL = 0
     SONG = 1
     SINGER = 2
+    CREATOR = 3
   end
 
   class << self
     # 楽曲リスト
     def list(id:, type:)
       songs = Song.list(id: id, type: type)
-                  .map { |song| [song, variations(song)].compact }
-                  .flatten
+      if type == SearchType::ALL || type == SearchType::CREATOR
+        songs = songs.map { |song| [song, variations(song)].compact }.flatten
+      end
       songs(songs)
     end
 

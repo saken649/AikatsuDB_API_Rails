@@ -12,7 +12,8 @@ Rails.application.routes.draw do
 
   # Songs
   get '/songs/by_singer/:singer_id', to: 'songs#list_by_singer' # 楽曲リスト(歌唱担当)
-  get '/songs/:song_id', to: 'songs#list_variation' # 楽曲バージョンリスト
+  get '/songs/by_creator/:creator_id', to: 'songs#list_by_creator' # 楽曲リスト(クリエイター)
+  # get '/songs/:song_id', to: 'songs#list_variation' # 楽曲バージョンリスト
   get '/songs', to: 'songs#list' # 楽曲リスト
   get '/song_detail/:song_id', to: 'songs#detail' # 楽曲詳細
   get '/song/search', to: 'songs#search'
